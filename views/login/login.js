@@ -1,26 +1,22 @@
 angular.module('blogApp')
 
-    .controller('loginCtrl', function($scope) {
+    .controller('loginCtrl', function($scope, $firebaseAuth, Auth) {
+
+
+        var auth = $firebaseAuth();
 
         $scope.signIn = function() {
-            var email = $scope.user.email;
-            var password = $scope.user.password;
+              $scope.firebaseUser = $scope.user.email + ", " + $scope.user.password;
+              $scope.error = null;
 
-            //Auth logic will go here
-            firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-                // Handle Errors here.
-                var errorCode = error.code;
-                var errorMessage = error.message;
-            });
-        };
+              auth.$signInWithEmailAndPassword().then(function(firebaseUser) {
+                $scope.firebaseUser = firebaseUser;
+              }).catch(function(error){
+                $scope.error = error;
+              });
+            };
 
-        $scope.signOut = function() {
-            firebase.auth().signOut().then(function() {
-                // Sign-out successful.
-                console.log('signed out');
-            }, function(error) {
-                // An error happened.
-            });
-        };
+
+
 
     });

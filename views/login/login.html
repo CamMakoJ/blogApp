@@ -9,6 +9,9 @@
         <input type="password" class="form-control" ng-model="user.password" placeholder="Password" required="">
         <button class="btn btn-lg btn-primary btn-block" ng-click="signIn()">Sign in</button>
         <button class="btn btn-lg btn-primary btn-block" ng-click="signOut()">Sign Out</button>
-
+    </div>
+    <div>
+        <p ng-if="firebaseUser">Signed in user: <strong>{{ firebaseUser.uid }}</strong></p>
+        <p ng-if="error">Error: <strong>{{ error }}</strong></p>
     </div>
 </div>
