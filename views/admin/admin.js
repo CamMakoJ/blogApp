@@ -1,5 +1,5 @@
 angular.module('blogApp')
 
-    .controller('adminCtrl', function($scope) {
+    .controller('adminCtrl', ["$scope", function($scope) {
 
-    });
+    }]);

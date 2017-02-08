@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 
-<div ng-controller="loginCtrl">
-    <div class="container">
-        <div class="jumbotron" style="padding-bottom:0px;">
-            <h2>Blog App</h2>
-        </div>
-        <input type="email" class="form-control" ng-model="user.email" required="" autofocus="">
-        <input type="password" class="form-control" ng-model="user.password" placeholder="Password" required="">
-        <button class="btn btn-lg btn-primary btn-block" ng-click="signIn()">Sign in</button>
-        <button class="btn btn-lg btn-primary btn-block" ng-click="signOut()">Sign Out</button>
-    </div>
-    <div>
-        <p ng-if="firebaseUser">Signed in user: <strong>{{ firebaseUser.uid }}</strong></p>
-        <p ng-if="error">Error: <strong>{{ error }}</strong></p>
-    </div>
+<div ng-app="sampleApp" ng-controller="loginCtrl">
+  <div ng-show="firebaseUser">
+    <p>Hello, {{ firebaseUser.displayName }}</p>
+    <button ng-click="auth.$signOut()">Sign Out</button>
+  </div>
+  <div ng-hide="firebaseUser">
+    <p>Welcome, please sign in.</p>
+    <input ng-model="user.email"/>
+    <input ng-model="user.password"/>
+    <button ng-click="auth.$signInWithEmailAndPassword(user.email, user.password)">Sign In</button>
+  </div>
 </div>

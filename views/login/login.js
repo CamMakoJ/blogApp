@@ -2,21 +2,11 @@ angular.module('blogApp')
 
     .controller('loginCtrl', function($scope, $firebaseAuth, Auth) {
 
+        $scope.auth = Auth;
 
-        var auth = $firebaseAuth();
-
-        $scope.signIn = function() {
-              $scope.firebaseUser = $scope.user.email + ", " + $scope.user.password;
-              $scope.error = null;
-
-              auth.$signInWithEmailAndPassword().then(function(firebaseUser) {
-                $scope.firebaseUser = firebaseUser;
-              }).catch(function(error){
-                $scope.error = error;
-              });
-            };
-
-
-
-
+        // any time auth state changes, add the user data to scope
+        $scope.auth.$onAuthStateChanged(function(firebaseUser) {
+            $scope.firebaseUser = firebaseUser;
+            console.log($scope.firebaseUser);
+        });
     });
