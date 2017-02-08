@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<div ng-app="sampleApp" ng-controller="loginCtrl">
+<div ng-controller="loginCtrl">
   <div ng-show="firebaseUser">
     <p>Hello, {{ firebaseUser.displayName }}</p>
     <button ng-click="auth.$signOut()">Sign Out</button>

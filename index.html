@@ -17,11 +17,10 @@
 
 <body>
 
-    <a ui-sref="home">Home</a>
-    <a ui-sref="login">Sign In</a>
-    <a ui-sref="admin">Admin</a>
 
-    <ui-view></ui-view>
+
+    <div ui-view="navbar"></div>
+    <div ui-view="main"></div>
 
     <!--Angular-->
     <script src="node_modules/angular/angular.js"></script>
@@ -44,6 +43,7 @@
     <!--Factories-->
     <script src="factory/Auth.js"></script>
     <!-- Angular Controllers Here -->
+    <script src="views/navbar/navbar.js"></script>
     <script src="views/login/login.js"></script>
     <script src="views/admin/admin.js"></script>
     <script src="views/home/home.js"></script>
