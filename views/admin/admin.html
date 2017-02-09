@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 
 <div ng-controller="adminCtrl">
-  <h1>Admin Menu</h1>
+    <h1>Admin Menu</h1>
 
+    <form>
+        <div class="mx-auto" style="width: 600px;">
+            <div class="form-group">
+                <input class="form-control" ng-model="post.title" type="text"/>
+                <input class="form-control" ng-model="post.content" type="text"/>
+                <input class="form-control" ng-model="post.author" type="text"/>
+                <input class="form-control" ng-model="post.tags" type="text"/>
+
+                {{post}}
+            </div>
+            <button ng-click="addPost()">Submit</button>
+        </div>
+    </form>
 </div>
