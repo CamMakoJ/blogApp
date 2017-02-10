@@ -6,11 +6,10 @@
     <form>
         <div class="mx-auto" style="width: 600px;">
             <div class="form-group">
-                <input class="form-control" ng-model="post.title" type="text"/>
-                <input class="form-control" ng-model="post.content" type="text"/>
-                <input class="form-control" ng-model="post.author" type="text"/>
-                <input class="form-control" ng-model="post.tags" type="text"/>
-
+                <input class="form-control" ng-model="post.title" type="text"/> Title
+                <input class="form-control" ng-model="post.content" type="text"/> Content
+                <input class="form-control" ng-model="post.author" type="text"/> Author
+                <input class="form-control" ng-model="post.tags" type="text"/> Tags
                 {{post}}
             </div>
             <button ng-click="addPost()">Submit</button>
