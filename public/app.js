@@ -1,4 +1,4 @@
-angular.module('blogApp', ['ui.router', 'firebase'])
+angular.module('blogApp', ['ui.router', 'firebase', 'ngMaterial'])
 
 .run(["$rootScope", "$state", function($rootScope, $state) {
   $rootScope.$on("$stateChangeError", function(event, toState, toParams, fromState, fromParams, error) {

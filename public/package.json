@@ -4,7 +4,7 @@
   "description": "My Blog",
   "main": "app.js",
   "dependencies": {
-    "angular": "^1.6.1",
+    "angular": "^1.6.2",
     "angular-ui-router": "^0.4.2"
   },
   "devDependencies": {},
