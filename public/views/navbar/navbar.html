@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-
 <div ng-controller="navbarCtrl">
-  <nav class="navbar navbar-inverse navbar-static-top">
-  <div class="container">
-    <button type="button" class="btn btn-inverse navbar-btn">
-      <a ui-sref="root.home">Home</a>
-    </button>
-    <button type="button" class="btn btn-inverse navbar-btn">
-          <a ui-sref="root.login">Sign In</a>
-    </button>
-    <button type="button" class="btn btn-inverse navbar-btn">
-      <a ui-sref="root.admin">Admin</a>
-    </button>
-  </div>
-</nav>
+
+    <md-content class="md-padding">
+        <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
+            <md-nav-item md-nav-sref="root.home" name="home">
+                Home
+            </md-nav-item>
+            <md-nav-item md-nav-sref="root.login" name="login">
+                Sign In
+            </md-nav-item>
+            <md-nav-item md-nav-sref="root.admin" name="admin">
+                Admin
+            </md-nav-item>
+
+        </md-nav-bar>
+    </md-content>
 </div>

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 
 <div ng-controller="homeCtrl">
-    <h1>Home</h1>
+    <h1 class="md-accent">Home</h1>
 
         <div flex>
             <div ng-repeat="post in posts | orderBy:'date':true" >
                     <md-card>
                         <md-card-title>
                             <md-card-title-text>
-                                <span class="md-headline">{{post.title}}</span>
+                                <span class="md-headline md-accent">{{post.title}}</span>
                                 <span class="md-subhead">{{post.date | date:'MMMM dd, yyyy'}}</span>
                             </md-card-title-text>
                         </md-card-title>
