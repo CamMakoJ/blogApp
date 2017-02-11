@@ -3,8 +3,11 @@
 <div ng-controller="loginCtrl">
     <div ng-show="firebaseUser">
         <p>Hello, {{ firebaseUser.displayName }}</p>
-        <button ng-click="auth.$signOut()">Sign Out</button>
+        <md-button class="md-accent md-raised" ng-click="auth.$signOut()">Sign Out</md-button>
+
     </div>
+
+
     <div ng-hide="firebaseUser">
         <p>Welcome, please sign in.</p>
         <div layout="column">
