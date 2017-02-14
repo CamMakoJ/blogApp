@@ -2,7 +2,7 @@
 
 <div ng-controller="loginCtrl">
     <div ng-show="firebaseUser">
-        <p>Hello, {{ firebaseUser.displayName }}</p>
+        <p>Hello, {{ firebaseUser.email }}</p>
         <md-button class="md-accent md-raised" ng-click="auth.$signOut()">Sign Out</md-button>
 
     </div>

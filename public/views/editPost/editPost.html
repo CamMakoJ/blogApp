@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<div ng-controller="editPostCtrl">
+
+    <h1>Edit Post</h1>
+
+    <form name="newPost">
+            <div layout="column">
+                <md-input-container>
+                    <label>Title</label>
+                    <input ng-model="post.title" type="text" />
+                </md-input-container>
+                <md-input-container>
+                    <label>Content</label>
+                    <textarea ng-model="post.content" type="text"></textarea>
+                </md-input-container>
+                <md-input-container>
+                    <label>Author</label>
+                    <input ng-model="post.author" type="text" />
+                </md-input-container>
+                <md-input-container>
+                    <label>Tags</label>
+                    <input ng-model="post.tags" type="text" />
+                </md-input-container>
+            </div>
+            <md-button class="md-accent md-raised" ng-click="addPost()">Submit</md-button>
+    </form>
+</div>

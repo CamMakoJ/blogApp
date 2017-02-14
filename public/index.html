@@ -15,11 +15,11 @@
 
 </head>
 
-<body>
+<body ng-cloak>
 
     <!--Content here with ui-views-->
-    <div ui-view="navbar"></div>
-    <div ui-view="main"></div>
+    <div ui-view="navbar" ng-cloak></div>
+    <div ui-view="main"  ng-cloak></div>
 
     <!--Angular-->
     <script src="node_modules/angular/angular.js"></script>
@@ -50,7 +50,9 @@
     <script src="views/login/login.js"></script>
     <script src="views/admin/admin.js"></script>
     <script src="views/home/home.js"></script>
-
+    <script src="views/newPost/newPost.js"></script>
+    <script src="views/adminNavbar/adminNavbar.js"></script>
+    <script src="views/editPost/editPost.js"></script>
 
 
 </body>
