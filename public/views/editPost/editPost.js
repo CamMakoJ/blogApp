@@ -7,10 +7,10 @@ angular.module('blogApp')
 
 
         $scope.addPost = function () {
-          //any pre-add changes (date to string)
-          $scope.post.date = new Date().getTime();
+          //any pre-add changes (date to string, removed for edit post)
+
           //add the post to firebase
-          $scope.posts.$add({
+          $scope.posts.$save({
             title: $scope.post.title,
             content: $scope.post.content,
             author: $scope.post.author,

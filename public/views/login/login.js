@@ -8,6 +8,7 @@ angular.module('blogApp')
         $scope.auth.$onAuthStateChanged(function(firebaseUser) {
             $scope.firebaseUser = firebaseUser;
             $rootScope.Authenticated = $scope.firebaseUser;
+            console.log($rootScope.Authenticated);
 
         });
     });

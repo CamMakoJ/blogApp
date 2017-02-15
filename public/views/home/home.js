@@ -1,11 +1,12 @@
 angular.module('blogApp')
-  .controller('homeCtrl', ['$scope', '$firebaseArray',
-    function($scope, $firebaseArray) {
+    .controller('homeCtrl', ['$scope', '$firebaseArray','Posts', '$rootScope',
 
-        var ref = firebase.database().ref().child('Posts');
-        var posts = $firebaseArray(ref);
+        function($scope, $firebaseArray, Posts, $rootScope) {
 
-        $scope.posts = posts;
+          var posts = Posts;
 
-    }
-]);
+            $scope.posts = posts;
+            console.log($rootScope.Authenticated);
+
+        }
+    ]);

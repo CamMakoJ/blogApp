@@ -18,12 +18,24 @@ angular.module('blogApp')
             //General Pages
             .state(homeState = {
                 name: 'root.home',
-                url: '/',
+                url: '/home',
                 views: {
                     'main@': {
                         templateUrl: 'views/home/home.html'
                     }
                 }
+            })
+
+            //Unique post Pages, child of root.home
+            .state(postState = {
+                name: 'root.post',
+                url: '/{{postId}}',
+                views: {
+                    'main@': {
+                        templateUrl: 'views/post/post.html'
+                    }
+                },
+
             })
 
             .state(signInState = {
@@ -62,7 +74,7 @@ angular.module('blogApp')
             //child state of root.admin
             .state(adminViewState = {
                 name: 'root.admin.newPost',
-                url: '/adming/new-post',
+                url: '/new-post',
                 views: {
                     'main@': {
                         templateUrl: 'views/newPost/newPost.html'
@@ -73,7 +85,7 @@ angular.module('blogApp')
             //child state of root.admin
             .state(adminViewState = {
                 name: 'root.admin.editPost',
-                url: '/adming/edit-post',
+                url: '/edit-post',
                 views: {
                     'main@': {
                         templateUrl: 'views/editPost/editPost.html'
@@ -82,6 +94,6 @@ angular.module('blogApp')
             });
 
         // Send to the homepage if the URL was not found
-        $urlRouterProvider.otherwise("/");
+        $urlRouterProvider.otherwise("/home");
 
     }]);

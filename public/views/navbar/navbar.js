@@ -6,6 +6,4 @@ angular.module('blogApp')
         var openState = $state.current.name.substring($state.current.name.lastIndexOf('.') + 1);
         $scope.currentNavItem = openState;
 
-        console.log($rootScope.Authenticated);
-
     }]);
