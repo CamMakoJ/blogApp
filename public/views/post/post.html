@@ -3,30 +3,30 @@
 <div ng-controller="postCtrl">
     <h1 class="md-accent">Home</h1>
 
-        <div flex>
-            <div>
-                    <md-card>
-                        <md-card-title>
-                            <md-card-title-text>
-                                <span class="md-headline md-accent">{{post.title}}</span>
-                                <span class="md-subhead">{{post.date | date:'MMMM dd, yyyy'}}</span>
-                            </md-card-title-text>
-                        </md-card-title>
-                        <md-card-content>
-                            <p>{{post.content}}</p>
-                        </md-card-content>
-                        <md-card-footer>
-                            <h3>{{post.author}}</h3>
-                            <p>{{post.tags}}</p>
-                        </md-card-footer>
-                      <p>
-                          {{post.id}}
-                      </p>
-                      <md-button class="md-accent md-raised" ui-sref="root.home">Back</md-button>
-
-                    </md-card>
-            </div>
+    <div flex>
+        <div>
+            <md-card>
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline md-accent">{{post.title}}</span>
+                        <span class="md-subhead">{{post.date | date:'MMMM dd, yyyy'}}</span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-content>
+                    <p>{{post.content}}</p>
+                </md-card-content>
+                <md-card-footer>
+                    <h3>{{post.author}}</h3>
+                    <p>{{post.tags}}</p>
+                </md-card-footer>
+                <p>
+                    {{post.id}}
+                </p>
+                <md-button class="md-accent md-raised" ui-sref="root.home">Back</md-button>
+                <md-button ng-show="authenticated" class="md-accent md-raised" ng-click="deletePost()">Delete</md-button>
+            </md-card>
         </div>
+    </div>
 
 
 
