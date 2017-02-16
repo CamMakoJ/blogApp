@@ -4,11 +4,9 @@ angular.module('blogApp')
 
             var id = $stateParams.postId;
             console.log(id);
-            var ref = Posts;
-            var post = ref.$getRecord(id);
-            $scope.post = post;
-
-
-
+            var ref = Posts.$loaded().then(function(ref){
+              var post = ref.$getRecord(id);
+                $scope.post = post;
+            });
         }
     ]);

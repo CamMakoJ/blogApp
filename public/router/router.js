@@ -29,7 +29,7 @@ angular.module('blogApp')
             //Unique post Pages, child of root.home
             .state(postState = {
                 name: 'root.post',
-                url: '/{{postId}}',
+                url: '/post/{postId}',
                 views: {
                     'main@': {
                         templateUrl: 'views/post/post.html'
