@@ -17,10 +17,9 @@
                 </md-card-content>
                 <md-card-footer>
                     <h3>{{post.author}}</h3>
-                    <p>{{post.tags}} {{post.$id}}</p>
+                    <p>{{post.tags}}</p>
                 </md-card-footer>
                 <md-button class="md-accent md-raised" ui-sref="root.post({postId: post.$id})" aria-label="view-post">View Post</md-button>
-                <md-button ng-show="Authenticated" class="md-accent md-raised" ui-sref="root.admin.editPost({postId: post.$id})" aria-label="edit-post">Edit Post</md-button>
             </md-card>
         </div>
     </div>

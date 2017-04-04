@@ -4,7 +4,8 @@
 
     <h1>Edit Post</h1>
 
-    <form name="newPost">
+    <div ng-repeat="post in posts">
+        <form>
             <div layout="column">
                 <md-input-container>
                     <label>Title</label>
@@ -23,6 +24,7 @@
                     <input ng-model="post.tags" type="text" />
                 </md-input-container>
             </div>
-            <md-button class="md-accent md-raised" ng-click="addPost()">Submit</md-button>
-    </form>
+            <md-button class="md-accent md-raised" ng-click="updatePost(post.$id)">Submit</md-button>
+        </form>
+    </div>
 </div>
